@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 #
 #
-a = ARGV[0].split(',') || []
+a = ARGV[0].split(',')
 b = a.each_with_object({even: {}, invalid: []}).with_index do |(element, dictionary), index|
   if index % 2 == 0 && dictionary[:even][element].nil? && !dictionary[:invalid].include?(element)
     dictionary[:even][element] = index
