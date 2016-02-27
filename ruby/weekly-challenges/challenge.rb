@@ -2,6 +2,7 @@
 #
 #
 a = ARGV[0].split(',')
+a = [1, 2, 1, 1, 3, 1, 1, 2, 4, 4, 3]
 b = a.each_with_object({even: {}, invalid: []}).with_index do |(element, dictionary), index|
   if index % 2 == 0 && dictionary[:even][element].nil? && !dictionary[:invalid].include?(element)
     dictionary[:even][element] = index
