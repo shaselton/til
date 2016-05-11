@@ -1,7 +1,6 @@
 require 'set'
 def happy_number(number)
-	history = Set.new
-	result, history = calculate(number, history)
+	result, history = calculate(number, Set.new)
 	result == 1
 end
 

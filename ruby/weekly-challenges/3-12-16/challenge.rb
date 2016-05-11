@@ -12,6 +12,7 @@ def word_pattern(pattern, string)
 	string_dictionary = []
 	string_array = string.split(' ')
 	pattern_array = pattern.split('')
+	
 	return false unless pattern_array.size == string_array.size
 
 	pattern_array.each_with_object({}).with_index do |(pattern_item, pattern_dictionary), index|
